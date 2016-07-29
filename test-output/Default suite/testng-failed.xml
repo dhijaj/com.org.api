@@ -5,7 +5,7 @@
     <classes>
       <class name="APITesting.com.org.api.Brands_ApiTests">
         <methods>
-          <include name="Test_GetBrandById"/>
+          <include name="Brands_DeleteApiTest"/>
         </methods>
       </class> <!-- APITesting.com.org.api.Brands_ApiTests -->
     </classes>

@@ -9,16 +9,18 @@ import static com.jayway.restassured.RestAssured.*;
 
 public class Brands_ApiTests {
 	String Json;
+	String GetBrandUrl="https://store-ybmmysy2kr.mybigcommerce.com/api/v2/brands.json";
+	String GetBrandUrlCount ="https://store-ybmmysy2kr.mybigcommerce.com/api/v2/brands/count.json";
 	String GetBrandUrlById;
 
 	@Test(priority=1)
 	public void Brands_DeleteAllApiTest(){
-		System.out.println("Test 1 started to delete all Brands in the Store ...");
+		System.out.println("Test 1 started to Delete all Brands in the Store ...");
 		System.out.println("----------------------------------------------------");
 
 		Response resp = given().auth().basic("dineshprabhu", "f74c95e01f047baf95b5d0b43829948222e31d8c").
 				when().
-				delete("https://store-ybmmysy2kr.mybigcommerce.com/api/v2/brands");
+				delete(GetBrandUrl);
 
 		Assert.assertEquals(resp.getStatusCode(), 204);
 		System.out.println("Deleted all Brands in Store: The API response code is : " + resp.getStatusCode() );
@@ -35,7 +37,7 @@ public class Brands_ApiTests {
 						).
 				when().
 				contentType(ContentType.JSON).
-				post("https://store-ybmmysy2kr.mybigcommerce.com/api/v2/brands.json");
+				post(GetBrandUrl);
 
 		Assert.assertEquals(resp.getStatusCode(), 201);
 		System.out.println("The API response code is : " + resp.getStatusCode() );
@@ -57,7 +59,7 @@ public class Brands_ApiTests {
 				body(postdata).
 				when().
 				contentType(ContentType.JSON).
-				post("https://store-ybmmysy2kr.mybigcommerce.com/api/v2/brands.json");
+				post(GetBrandUrl);
 
 		Assert.assertEquals(resp.getStatusCode(), 201);
 		System.out.println("The API response code is : " + resp.getStatusCode() );
@@ -75,7 +77,7 @@ public class Brands_ApiTests {
 
 		Response resp = given().auth().basic("dineshprabhu", "f74c95e01f047baf95b5d0b43829948222e31d8c").
 				when().
-				get("https://store-ybmmysy2kr.mybigcommerce.com/api/v2/brands/count.json");
+				get(GetBrandUrlCount);
 		Assert.assertEquals(resp.getStatusCode(), 200);
 		System.out.println("The API response code is : " + resp.getStatusCode() );
 		System.out.println("The API Response is : " + resp.asString());
@@ -86,12 +88,12 @@ public class Brands_ApiTests {
 	@Test(priority=4)
 	public void Brands_GetApiTest(){
 
-		System.out.println("Test 4 started to get Brands ...");
+		System.out.println("Test 4 started to Get Brands ...");
 		System.out.println("----------------------------------------------------");
 
 		Response resp = given().auth().basic("dineshprabhu", "f74c95e01f047baf95b5d0b43829948222e31d8c").
 				when().
-				get("https://store-ybmmysy2kr.mybigcommerce.com/api/v2/brands.json");
+				get(GetBrandUrl);
 		Assert.assertEquals(resp.getStatusCode(), 200);
 		System.out.println("The API response code is : " + resp.getStatusCode() );
 		Json = resp.asString();
@@ -103,7 +105,7 @@ public class Brands_ApiTests {
 	public void Test_GetBrandById(){
 
 
-		System.out.println("Test 5 started to get Brands by ID ...");
+		System.out.println("Test 5 started to Get Brands by ID ...");
 		System.out.println("----------------------------------------------------");
 
 		Json=Json.replace("[","");
@@ -149,12 +151,12 @@ public class Brands_ApiTests {
 	}
 
 	
-	//@Test(priority=7)
+	@Test(priority=7)
 	public void Brands_DeleteApiTest(){
 
 		Response resp = given().auth().basic("dineshprabhu", "f74c95e01f047baf95b5d0b43829948222e31d8c").
 				when().
-				delete("https://store-ybmmysy2kr.mybigcommerce.com/api/v2/brands/35");
+				delete(GetBrandUrlById);
 
 		//Assert.assertEquals(resp.getStatusCode(), 200);
 		System.out.println("The API response code is : " + resp.getStatusCode() );
