@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="22666" started-at="2016-07-29T05:51:17Z" finished-at="2016-07-29T05:51:40Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="22666" started-at="2016-07-29T05:51:17Z" finished-at="2016-07-29T05:51:40Z">
+      <class name="APITesting.com.org.api.Brands_ApiTests">
+        <test-method status="PASS" signature="Brands_DeleteAllApiTest()[pri:1, instance:APITesting.com.org.api.Brands_ApiTests@59fa1d9b]" name="Brands_DeleteAllApiTest" duration-ms="6256" started-at="2016-07-29T15:51:18Z" finished-at="2016-07-29T15:51:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Brands_DeleteAllApiTest -->
+        <test-method status="PASS" signature="Brands_PostApiTest_usingObjects()[pri:2, instance:APITesting.com.org.api.Brands_ApiTests@59fa1d9b]" name="Brands_PostApiTest_usingObjects" duration-ms="4712" started-at="2016-07-29T15:51:24Z" finished-at="2016-07-29T15:51:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Brands_PostApiTest_usingObjects -->
+        <test-method status="PASS" signature="Brands_GetCountApiTest()[pri:3, instance:APITesting.com.org.api.Brands_ApiTests@59fa1d9b]" name="Brands_GetCountApiTest" duration-ms="3261" started-at="2016-07-29T15:51:28Z" finished-at="2016-07-29T15:51:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Brands_GetCountApiTest -->
+        <test-method status="PASS" signature="Brands_GetApiTest()[pri:4, instance:APITesting.com.org.api.Brands_ApiTests@59fa1d9b]" name="Brands_GetApiTest" duration-ms="2866" started-at="2016-07-29T15:51:32Z" finished-at="2016-07-29T15:51:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Brands_GetApiTest -->
+        <test-method status="PASS" signature="Test_GetBrandById()[pri:5, instance:APITesting.com.org.api.Brands_ApiTests@59fa1d9b]" name="Test_GetBrandById" duration-ms="2802" started-at="2016-07-29T15:51:35Z" finished-at="2016-07-29T15:51:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_GetBrandById -->
+        <test-method status="PASS" signature="Brands_PutApiTest_usingObjects()[pri:6, instance:APITesting.com.org.api.Brands_ApiTests@59fa1d9b]" name="Brands_PutApiTest_usingObjects" duration-ms="2722" started-at="2016-07-29T15:51:37Z" finished-at="2016-07-29T15:51:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Brands_PutApiTest_usingObjects -->
+      </class> <!-- APITesting.com.org.api.Brands_ApiTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
